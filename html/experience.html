@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="البورتفوليو الشخصي الاحترافي - مطور واجهات تفاعلية ومصمم تجربة مستخدم">
+    <meta name="author" content="Antigravity">
+    <title>معرض أعمالي الاحترافي | Professional Portfolio</title>
+    
+    <!-- Google Fonts: Cairo for Arabic, Poppins for English -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons for Cyber Aesthetics -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Custom Cursor Dot & Outline -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Dynamic Particles Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Page Transition Cinematic Sweep Curtain -->
+    <div class="transition-curtain" id="transition-curtain">
+        <div class="curtain-layer layer-1"></div>
+        <div class="curtain-layer layer-2"></div>
+    </div>
+
+    <!-- Page Loader Screen -->
+    <div class="loader-wrapper" id="loader-wrapper">
+        <div class="loader-container">
+            <div class="loader-ring"></div>
+            <div class="loader-glow"></div>
+            <div class="loader-text" data-key="loading">جاري التحميل...</div>
+        </div>
+    </div>
+
+    <!-- Background Ambient Music Audio Indicator -->
+    <div class="ambient-music-panel">
+        <button class="music-toggle hover-target" id="music-toggle" title="تشغيل صوت هادئ">
+            <i class="fa-solid fa-volume-xmark"></i>
+            <span class="music-pulse-bars">
+                <span></span><span></span><span></span><span></span>
+            </span>
+        </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar-nav">
+        <div class="sidebar-brand">
+            <div class="brand-logo">
+                <span>A</span>
+            </div>
+            <h2 class="brand-name" data-key="brand_name">أحمد.</h2>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="../index.html" class="nav-link hover-target" data-section="home">
+                <i class="fa-solid fa-house"></i>
+                <span data-key="nav_home">الرئيسية</span>
+            </a>
+            <a href="about.html" class="nav-link hover-target" data-section="about">
+                <i class="fa-solid fa-user"></i>
+                <span data-key="nav_about">من أنا</span>
+            </a>
+            <a href="services.html" class="nav-link hover-target" data-section="services">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span data-key="nav_services">الخدمات</span>
+            </a>
+            <a href="portfolio.html" class="nav-link hover-target" data-section="portfolio">
+                <i class="fa-solid fa-briefcase"></i>
+                <span data-key="nav_portfolio">أعمالي</span>
+            </a>
+            <a href="experience.html" class="nav-link hover-target" data-section="experience">
+                <i class="fa-solid fa-timeline"></i>
+                <span data-key="nav_experience">الخبرة</span>
+            </a>
+            <a href="education.html" class="nav-link hover-target" data-section="education">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span data-key="nav_education">الدراسة</span>
+            </a>
+            <a href="contact.html" class="nav-link hover-target" data-section="contact">
+                <i class="fa-solid fa-envelope"></i>
+                <span data-key="nav_contact">اتصل بنا</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <!-- Language Toggle Switch -->
+            <button class="lang-toggle-btn hover-target" id="lang-toggle-btn">
+                <span class="lang-text active" id="lang-ar">عربي</span>
+                <span class="lang-divider">|</span>
+                <span class="lang-text" id="lang-en">EN</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Mobile Top Navigation Header -->
+    <header class="mobile-header">
+        <div class="brand-logo"><span>A</span></div>
+        <div class="mobile-header-actions">
+            <!-- Language Toggle Switch (Mobile) -->
+            <button class="mobile-lang-btn hover-target" id="mobile-lang-toggle-btn">
+                <i class="fa-solid fa-globe"></i>
+                <span class="mobile-lang-label">EN</span>
+            </button>
+            <button class="menu-burger hover-target" id="menu-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+        <div class="page-container">
+
+            
+
+            
+
+            
+
+            
+
+            <!-- ================= EXPERIENCE SECTION ================= -->
+            <section id="experience" class="page-section active">
+                <div class="section-content">
+                    <div class="section-header">
+                        <span class="section-subtitle" data-key="experience_subtitle">مسيرتي المهنية</span>
+                        <h2 class="section-title" data-key="experience_title">الخبرة العملية</h2>
+                        <div class="title-underline"></div>
+                    </div>
+
+                    <!-- Vertical Interactive Timeline -->
+                    <div class="timeline-container">
+                        <div class="timeline-line"></div>
+                        
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item timeline-left">
+                            <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="timeline-content glass-panel hover-target">
+                                <div class="timeline-date">2024 - <span data-key="time_present">الآن</span></div>
+                                <h3 class="timeline-role" data-key="role1_title">مطور واجهات تفاعلية أول</h3>
+                                <h4 class="timeline-company" data-key="role1_comp">استوديو سايبر تك الرقمي</h4>
+                                <p class="timeline-desc" data-key="role1_desc">
+                                    أقود فريق التطوير الأمامي لبناء منصات تجارية كبرى، مع التركيز على تحسين أداء الحركة وتقليل أوقات تحميل العناصر بنسبة 40%.
+                                </p>
+                                <button class="timeline-expand-btn hover-target" data-key="timeline_more">التفاصيل والمهام <i class="fa-solid fa-chevron-down"></i></button>
+                                <div class="timeline-details-drawer">
+                                    <ul class="timeline-bullets">
+                                        <li data-key="bullet1_1">إدارة وبناء الهيكل الأمامي للمشاريع المعقدة باستخدام معايير CSS Grid الحديثة.</li>
+                                        <li data-key="bullet1_2">تأمين استجابة الصفحات بنسبة 100% وتوافقها التام مع كافة الهواتف والأجهزة اللوحية.</li>
+                                        <li data-key="bullet1_3">برمجة انتقالات سينمائية مميزة باستخدام محركات الحركة والتفاعل المباشر.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item timeline-right">
+                            <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="timeline-content glass-panel hover-target">
+                                <div class="timeline-date">2021 - 2024</div>
+                                <h3 class="timeline-role" data-key="role2_title">مطور واجهات ويب</h3>
+                                <h4 class="timeline-company" data-key="role2_comp">مؤسسة الحلول السحابية الذكية</h4>
+                                <p class="timeline-desc" data-key="role2_desc">
+                                    قمت بتطوير أكثر من 25 موقع تعريفي وتطبيقات لوحات تحكم متقدمة، مع دمج التقنيات السلسة والرسومات البيانية الحية.
+                                </p>
+                                <button class="timeline-expand-btn hover-target" data-key="timeline_more">التفاصيل والمهام <i class="fa-solid fa-chevron-down"></i></button>
+                                <div class="timeline-details-drawer">
+                                    <ul class="timeline-bullets">
+                                        <li data-key="bullet2_1">تحويل ملفات Figma و Adobe XD إلى صفحات ويب دقيقة البكسلات.</li>
+                                        <li data-key="bullet2_2">كتابة أكواد جافاسكريبت نقية ومنظمة وسريعة التنفيذ لتوفير تفاعلات ديناميكية للمستخدم.</li>
+                                        <li data-key="bullet2_3">تطوير مكتبات ومكونات فرعية قابلة لإعادة الاستخدام لتقليص حجم الملفات الكلي.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-item timeline-left">
+                            <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="timeline-content glass-panel hover-target">
+                                <div class="timeline-date">2019 - 2021</div>
+                                <h3 class="timeline-role" data-key="role3_title">مصمم واجهات ومطور مبتدئ</h3>
+                                <h4 class="timeline-company" data-key="role3_comp">وكالة الإبداع الرقمية للبرمجيات</h4>
+                                <p class="timeline-desc" data-key="role3_desc">
+                                    بدأت مسيرتي بالمشاركة في تصميم واجهات المستخدم والمساعدة في كتابة كود الهياكل الأساسية والأنماط التجميلية للمواقع.
+                                </p>
+                                <button class="timeline-expand-btn hover-target" data-key="timeline_more">التفاصيل والمهام <i class="fa-solid fa-chevron-down"></i></button>
+                                <div class="timeline-details-drawer">
+                                    <ul class="timeline-bullets">
+                                        <li data-key="bullet3_1">تصميم نماذج أولية سلكية وتدفقات مستخدم مريحة وجذابة.</li>
+                                        <li data-key="bullet3_2">تطوير صفحات هبوط جذابة باستخدام تقنيات HTML5 و CSS3 التفاعلية.</li>
+                                        <li data-key="bullet3_3">تنظيف وتعديل الأكواد القديمة وحل مشكلات التوافقية مع المتصفحات القديمة.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            
+
+        </div>
+    </main>
+
+    <!-- ================= SERVICES DETAIL MODAL ================= -->
+    <div class="modal-overlay" id="services-modal">
+        <div class="modal-card glass-panel">
+            <button class="modal-close hover-target" id="modal-close-btn">&times;</button>
+            <div class="modal-body" id="modal-body-content">
+                <!-- Injected via Javascript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PORTFOLIO LIGHTBOX VIEW ================= -->
+    <div class="lightbox-overlay" id="portfolio-lightbox">
+        <button class="lightbox-close hover-target" id="lightbox-close-btn">&times;</button>
+        <button class="lightbox-nav lightbox-prev hover-target" id="lightbox-prev-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="lightbox-nav lightbox-next hover-target" id="lightbox-next-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        
+        <div class="lightbox-container">
+            <div class="lightbox-media-wrapper" id="lightbox-media-wrapper">
+                <!-- SVG mock or dynamic content injected via JS -->
+            </div>
+            <div class="lightbox-details-wrapper">
+                <span class="lightbox-category" id="lightbox-category">موقع ويب</span>
+                <h3 class="lightbox-title" id="lightbox-title">عنوان المشروع</h3>
+                <p class="lightbox-desc" id="lightbox-desc">وصف تفصيلي للمشروع هنا.</p>
+                <div class="lightbox-tags" id="lightbox-tags">
+                    <span>HTML</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SUCCESS CONFETTI POPUP ================= -->
+    <div class="success-overlay" id="success-overlay">
+        <!-- Confetti Canvas -->
+        <canvas id="confetti-canvas"></canvas>
+        <div class="success-card glass-panel">
+            <div class="success-icon-ring animate-bounce">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="success-title" data-key="success_title">تم الإرسال بنجاح!</h3>
+            <p class="success-desc" data-key="success_desc">شكرًا لتواصلك معي. لقد تلقيت رسالتك وسأقوم بالرد عليك في أقرب وقت ممكن.</p>
+            <button class="btn btn-primary hover-target" id="success-close-btn" data-key="success_close_btn">حسنًا</button>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="../js/script.js?v=1.0.1"></script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="البورتفوليو الشخصي الاحترافي - مطور واجهات تفاعلية ومصمم تجربة مستخدم">
+    <meta name="author" content="Antigravity">
+    <title>معرض أعمالي الاحترافي | Professional Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="dark-theme">
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+    <canvas id="particles-canvas"></canvas>
+    <div class="transition-curtain" id="transition-curtain">
+        <div class="curtain-layer layer-1"></div>
+        <div class="curtain-layer layer-2"></div>
+    </div>
+
+    <div class="loader-wrapper" id="loader-wrapper">
+        <div class="loader-container">
+            <div class="loader-ring"></div>
+            <div class="loader-glow"></div>
+            <div class="loader-text" data-key="loading">جاري التحميل...</div>
+        </div>
+    </div>
+
+    <div class="ambient-music-panel">
+        <button class="music-toggle hover-target" id="music-toggle" title="تشغيل صوت هادئ">
+            <i class="fa-solid fa-volume-xmark"></i>
+            <span class="music-pulse-bars">
+                <span></span><span></span><span></span><span></span>
+            </span>
+        </button>
+    </div>
+
+    <aside class="sidebar-nav">
+        <div class="sidebar-brand">
+            <div class="brand-logo">
+                <span>A</span>
+            </div>
+            <h2 class="brand-name" data-key="brand_name">أحمد.</h2>
+        </div>
+
+        <nav class="nav-links">
+            <a href="../index.html" class="nav-link hover-target" data-section="home">
+                <i class="fa-solid fa-house"></i>
+                <span data-key="nav_home">الرئيسية</span>
+            </a>
+            <a href="about.html" class="nav-link hover-target" data-section="about">
+                <i class="fa-solid fa-user"></i>
+                <span data-key="nav_about">من أنا</span>
+            </a>
+            <a href="services.html" class="nav-link hover-target" data-section="services">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span data-key="nav_services">الخدمات</span>
+            </a>
+            <a href="portfolio.html" class="nav-link hover-target" data-section="portfolio">
+                <i class="fa-solid fa-briefcase"></i>
+                <span data-key="nav_portfolio">أعمالي</span>
+            </a>
+            <a href="experience.html" class="nav-link hover-target" data-section="experience">
+                <i class="fa-solid fa-timeline"></i>
+                <span data-key="nav_experience">الخبرة</span>
+            </a>
+            <a href="education.html" class="nav-link hover-target" data-section="education">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span data-key="nav_education">الدراسة</span>
+            </a>
+            <a href="contact.html" class="nav-link hover-target" data-section="contact">
+                <i class="fa-solid fa-envelope"></i>
+                <span data-key="nav_contact">اتصل بنا</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="lang-toggle-btn hover-target" id="lang-toggle-btn">
+                <span class="lang-text active" id="lang-ar">عربي</span>
+                <span class="lang-divider">|</span>
+                <span class="lang-text" id="lang-en">EN</span>
+            </button>
+        </div>
+    </aside>
+
+    <header class="mobile-header">
+        <div class="brand-logo"><span>A</span></div>
+        <div class="mobile-header-actions">
+            <button class="mobile-lang-btn hover-target" id="mobile-lang-toggle-btn">
+                <i class="fa-solid fa-globe"></i>
+                <span class="mobile-lang-label">EN</span>
+            </button>
+            <button class="menu-burger hover-target" id="menu-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="page-container">
+            <section id="about" class="page-section active">
+                <div class="section-content">
+                    <div class="section-header">
+                        <span class="section-subtitle" data-key="about_subtitle">تعرف عليّ</span>
+                        <h2 class="section-title" data-key="about_title">من أنا</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                    <div class="about-grid">
+                        <div class="about-image-card">
+                            <div class="profile-glow-ring"></div>
+                            <div class="profile-avatar-container">
+                                <div class="abstract-avatar">
+                                    <div class="sphere-core"></div>
+                                    <div class="orbit orbit-1"></div>
+                                    <div class="orbit orbit-2"></div>
+                                    <div class="orbit orbit-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-details-card">
+                            <h3 class="about-headline" data-key="about_headline">شغوف بابتكار واجهات الويب التي تنبض
+                                بالحياة</h3>
+                            <p class="about-bio" data-key="about_bio">
+                                أنا مطور واجهات مستخدم ومصمم تفاعلي أعمل في هذا المجال منذ أكثر من 5 سنوات. أركز على سد
+                                الفجوة بين التصميم الجمالي والبرمجة عالية الكفاءة. أؤمن بشدة بأن الحركة والترانزيشن ليست
+                                مجرد تجميل، بل هي أداة توجه انتباه المستخدم وتثري تجربة تصفحه.
+                            </p>
+
+                            <div class="personal-info-grid">
+                                <div class="info-item">
+                                    <span class="info-label" data-key="info_age_label">العمر:</span>
+                                    <span class="info-value" data-key="info_age_value">26 عامًا</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label" data-key="info_email_label">البريد:</span>
+                                    <span class="info-value" data-key="info_email_value">dev.ahmed@example.com</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label" data-key="info_phone_label">الهاتف:</span>
+                                    <span class="info-value" data-key="info_phone_value">+966 50 123 4567</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label" data-key="info_loc_label">الموقع:</span>
+                                    <span class="info-value" data-key="info_loc_value">الرياض، المملكة العربية
+                                        السعودية</span>
+                                </div>
+                            </div>
+
+                            <div class="about-cta-cv">
+                                <a href="#" class="btn btn-primary hover-target" id="download-cv-btn">
+                                    <span data-key="btn_download_cv">تحميل السيرة الذاتية (CV)</span>
+                                    <i class="fa-solid fa-download"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-dashboard">
+                        <div class="counters-grid">
+                            <div class="counter-card glass-panel hover-target">
+                                <div class="counter-icon"><i class="fa-solid fa-code"></i></div>
+                                <div class="counter-num" data-target="40">0</div>
+                                <div class="counter-label" data-key="count_projects">مشروع مكتمل</div>
+                            </div>
+                            <div class="counter-card glass-panel hover-target">
+                                <div class="counter-icon"><i class="fa-solid fa-award"></i></div>
+                                <div class="counter-num" data-target="5">0</div>
+                                <div class="counter-label" data-key="count_experience">سنوات خبرة</div>
+                            </div>
+                            <div class="counter-card glass-panel hover-target">
+                                <div class="counter-icon"><i class="fa-solid fa-users"></i></div>
+                                <div class="counter-num" data-target="100">0</div>
+                                <div class="counter-label" data-key="count_clients">عميل سعيد %</div>
+                            </div>
+                        </div>
+
+                        <div class="skills-section">
+                            <h3 class="skills-title" data-key="skills_title">مهاراتي التقنية</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">HTML5 & CSS3</span>
+                                        <span class="skill-percent">95%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill" data-percent="95"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">JavaScript (ES6+)</span>
+                                        <span class="skill-percent">90%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill" data-percent="90"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">UI/UX Design & Prototyping</span>
+                                        <span class="skill-percent">85%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill" data-percent="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">CSS Transitions & Web Animations</span>
+                                        <span class="skill-percent">95%</span>
+                                    </div>
+                                    <div class="skill-bar-bg">
+                                        <div class="skill-bar-fill" data-percent="95"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="services-modal">
+        <div class="modal-card glass-panel">
+            <button class="modal-close hover-target" id="modal-close-btn">&times;</button>
+            <div class="modal-body" id="modal-body-content">
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox-overlay" id="portfolio-lightbox">
+        <button class="lightbox-close hover-target" id="lightbox-close-btn">&times;</button>
+        <button class="lightbox-nav lightbox-prev hover-target" id="lightbox-prev-btn"><i
+                class="fa-solid fa-chevron-right"></i></button>
+        <button class="lightbox-nav lightbox-next hover-target" id="lightbox-next-btn"><i
+                class="fa-solid fa-chevron-left"></i></button>
+
+        <div class="lightbox-container">
+            <div class="lightbox-media-wrapper" id="lightbox-media-wrapper">
+            </div>
+            <div class="lightbox-details-wrapper">
+                <span class="lightbox-category" id="lightbox-category">موقع ويب</span>
+                <h3 class="lightbox-title" id="lightbox-title">عنوان المشروع</h3>
+                <p class="lightbox-desc" id="lightbox-desc">وصف تفصيلي للمشروع هنا.</p>
+                <div class="lightbox-tags" id="lightbox-tags">
+                    <span>HTML</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="success-overlay" id="success-overlay">
+        <canvas id="confetti-canvas"></canvas>
+        <div class="success-card glass-panel">
+            <div class="success-icon-ring animate-bounce">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="success-title" data-key="success_title">تم الإرسال بنجاح!</h3>
+            <p class="success-desc" data-key="success_desc">شكرًا لتواصلك معي. لقد تلقيت رسالتك وسأقوم بالرد عليك في
+                أقرب وقت ممكن.</p>
+            <button class="btn btn-primary hover-target" id="success-close-btn"
+                data-key="success_close_btn">حسنًا</button>
+        </div>
+    </div>
+
+    <script src="../js/script.js?v=1.0.1"></script>
+</body>
+
+</html>

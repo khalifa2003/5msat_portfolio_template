@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="البورتفوليو الشخصي الاحترافي - مطور واجهات تفاعلية ومصمم تجربة مستخدم">
+    <meta name="author" content="Antigravity">
+    <title>معرض أعمالي الاحترافي | Professional Portfolio</title>
+    
+    <!-- Google Fonts: Cairo for Arabic, Poppins for English -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons for Cyber Aesthetics -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Custom Cursor Dot & Outline -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Dynamic Particles Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Page Transition Cinematic Sweep Curtain -->
+    <div class="transition-curtain" id="transition-curtain">
+        <div class="curtain-layer layer-1"></div>
+        <div class="curtain-layer layer-2"></div>
+    </div>
+
+    <!-- Page Loader Screen -->
+    <div class="loader-wrapper" id="loader-wrapper">
+        <div class="loader-container">
+            <div class="loader-ring"></div>
+            <div class="loader-glow"></div>
+            <div class="loader-text" data-key="loading">جاري التحميل...</div>
+        </div>
+    </div>
+
+    <!-- Background Ambient Music Audio Indicator -->
+    <div class="ambient-music-panel">
+        <button class="music-toggle hover-target" id="music-toggle" title="تشغيل صوت هادئ">
+            <i class="fa-solid fa-volume-xmark"></i>
+            <span class="music-pulse-bars">
+                <span></span><span></span><span></span><span></span>
+            </span>
+        </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar-nav">
+        <div class="sidebar-brand">
+            <div class="brand-logo">
+                <span>A</span>
+            </div>
+            <h2 class="brand-name" data-key="brand_name">أحمد.</h2>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="../index.html" class="nav-link hover-target" data-section="home">
+                <i class="fa-solid fa-house"></i>
+                <span data-key="nav_home">الرئيسية</span>
+            </a>
+            <a href="about.html" class="nav-link hover-target" data-section="about">
+                <i class="fa-solid fa-user"></i>
+                <span data-key="nav_about">من أنا</span>
+            </a>
+            <a href="services.html" class="nav-link hover-target" data-section="services">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span data-key="nav_services">الخدمات</span>
+            </a>
+            <a href="portfolio.html" class="nav-link hover-target" data-section="portfolio">
+                <i class="fa-solid fa-briefcase"></i>
+                <span data-key="nav_portfolio">أعمالي</span>
+            </a>
+            <a href="experience.html" class="nav-link hover-target" data-section="experience">
+                <i class="fa-solid fa-timeline"></i>
+                <span data-key="nav_experience">الخبرة</span>
+            </a>
+            <a href="education.html" class="nav-link hover-target" data-section="education">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span data-key="nav_education">الدراسة</span>
+            </a>
+            <a href="contact.html" class="nav-link hover-target" data-section="contact">
+                <i class="fa-solid fa-envelope"></i>
+                <span data-key="nav_contact">اتصل بنا</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <!-- Language Toggle Switch -->
+            <button class="lang-toggle-btn hover-target" id="lang-toggle-btn">
+                <span class="lang-text active" id="lang-ar">عربي</span>
+                <span class="lang-divider">|</span>
+                <span class="lang-text" id="lang-en">EN</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Mobile Top Navigation Header -->
+    <header class="mobile-header">
+        <div class="brand-logo"><span>A</span></div>
+        <div class="mobile-header-actions">
+            <!-- Language Toggle Switch (Mobile) -->
+            <button class="mobile-lang-btn hover-target" id="mobile-lang-toggle-btn">
+                <i class="fa-solid fa-globe"></i>
+                <span class="mobile-lang-label">EN</span>
+            </button>
+            <button class="menu-burger hover-target" id="menu-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+        <div class="page-container">
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <!-- ================= CONTACT SECTION ================= -->
+            <section id="contact" class="page-section active">
+                <div class="section-content">
+                    <div class="section-header">
+                        <span class="section-subtitle" data-key="contact_subtitle">تواصل معي</span>
+                        <h2 class="section-title" data-key="contact_title">اتصل بنا</h2>
+                        <div class="title-underline"></div>
+                    </div>
+
+                    <div class="contact-grid">
+                        <!-- Contact Info sidebar -->
+                        <div class="contact-info-block">
+                            <h3 class="contact-headline" data-key="contact_headline">دعنا نصنع شيئًا مبهرًا معًا!</h3>
+                            <p class="contact-subtext" data-key="contact_subtext">
+                                هل لديك فكرة مشروع إبداعي أو ترغب في استشارتي بخصوص تطوير واجهاتك الأمامية؟ لا تتردد بالاتصال بي فورًا وسأرد عليك خلال 24 ساعة كحد أقصى.
+                            </p>
+
+                            <div class="contact-details-list">
+                                <div class="contact-detail-item glass-panel hover-target">
+                                    <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                                    <div class="detail-info">
+                                        <span class="detail-label" data-key="info_email_label">البريد الإلكتروني</span>
+                                        <a href="mailto:dev.ahmed@example.com" class="detail-value">dev.ahmed@example.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-detail-item glass-panel hover-target">
+                                    <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                                    <div class="detail-info">
+                                        <span class="detail-label" data-key="info_phone_label">رقم الهاتف</span>
+                                        <a href="tel:+966501234567" class="detail-value">+966 50 123 4567</a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-detail-item glass-panel hover-target">
+                                    <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div class="detail-info">
+                                        <span class="detail-label" data-key="info_loc_label">العنوان الحالي</span>
+                                        <span class="detail-value" data-key="info_loc_value">الرياض، المملكة العربية السعودية</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Social Network Badges -->
+                            <div class="social-links">
+                                <a href="#" class="social-btn hover-target" title="لينكد إن"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#" class="social-btn hover-target" title="جيت هاب"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="social-btn hover-target" title="تويتر"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#" class="social-btn hover-target" title="بيهانس"><i class="fa-brands fa-behance"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Elegant Contact Form -->
+                        <div class="contact-form-block glass-panel">
+                            <form id="portfolio-contact-form" class="cyber-form" novalidate>
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <input type="text" id="form-name" required placeholder=" " class="hover-target">
+                                        <label for="form-name" data-key="form_lbl_name">الاسم الكريم</label>
+                                        <span class="input-glow-bar"></span>
+                                        <span class="error-msg" data-key="err_name">الرجاء إدخال الاسم</span>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <input type="email" id="form-email" required placeholder=" " class="hover-target">
+                                        <label for="form-email" data-key="form_lbl_email">البريد الإلكتروني</label>
+                                        <span class="input-glow-bar"></span>
+                                        <span class="error-msg" data-key="err_email">الرجاء إدخال بريد إلكتروني صحيح</span>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <input type="text" id="form-subject" placeholder=" " class="hover-target">
+                                        <label for="form-subject" data-key="form_lbl_subject">موضوع الرسالة</label>
+                                        <span class="input-glow-bar"></span>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="input-group">
+                                        <textarea id="form-message" required rows="5" placeholder=" " class="hover-target"></textarea>
+                                        <label for="form-message" data-key="form_lbl_msg">نص الرسالة</label>
+                                        <span class="input-glow-bar"></span>
+                                        <span class="error-msg" data-key="err_message">الرجاء كتابة نص الرسالة</span>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-submit hover-target" id="form-submit-btn">
+                                    <span data-key="btn_send">إرسال الرسالة الآن</span>
+                                    <i class="fa-solid fa-paper-plane send-icon"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ================= SERVICES DETAIL MODAL ================= -->
+    <div class="modal-overlay" id="services-modal">
+        <div class="modal-card glass-panel">
+            <button class="modal-close hover-target" id="modal-close-btn">&times;</button>
+            <div class="modal-body" id="modal-body-content">
+                <!-- Injected via Javascript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PORTFOLIO LIGHTBOX VIEW ================= -->
+    <div class="lightbox-overlay" id="portfolio-lightbox">
+        <button class="lightbox-close hover-target" id="lightbox-close-btn">&times;</button>
+        <button class="lightbox-nav lightbox-prev hover-target" id="lightbox-prev-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="lightbox-nav lightbox-next hover-target" id="lightbox-next-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        
+        <div class="lightbox-container">
+            <div class="lightbox-media-wrapper" id="lightbox-media-wrapper">
+                <!-- SVG mock or dynamic content injected via JS -->
+            </div>
+            <div class="lightbox-details-wrapper">
+                <span class="lightbox-category" id="lightbox-category">موقع ويب</span>
+                <h3 class="lightbox-title" id="lightbox-title">عنوان المشروع</h3>
+                <p class="lightbox-desc" id="lightbox-desc">وصف تفصيلي للمشروع هنا.</p>
+                <div class="lightbox-tags" id="lightbox-tags">
+                    <span>HTML</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SUCCESS CONFETTI POPUP ================= -->
+    <div class="success-overlay" id="success-overlay">
+        <!-- Confetti Canvas -->
+        <canvas id="confetti-canvas"></canvas>
+        <div class="success-card glass-panel">
+            <div class="success-icon-ring animate-bounce">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="success-title" data-key="success_title">تم الإرسال بنجاح!</h3>
+            <p class="success-desc" data-key="success_desc">شكرًا لتواصلك معي. لقد تلقيت رسالتك وسأقوم بالرد عليك في أقرب وقت ممكن.</p>
+            <button class="btn btn-primary hover-target" id="success-close-btn" data-key="success_close_btn">حسنًا</button>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="../js/script.js?v=1.0.1"></script>
+</body>
+</html>
